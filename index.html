@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>智洁仪——智能电动牙刷检测仪器</title>
+    <style type="text/css">
+        @import url(css/lunbo.css);
+        @import url(css/zy_style.css);
+    </style>
+    <script src="js/new_file.js" defer></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/lunbo.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            const backgroundMusic = new Audio('m.mp3');
+            const playButton = $('#playButton');
+
+            // 检查 localStorage 中是否存储了播放状态
+            const isPlaying = localStorage.getItem('musicPlaying');
+            if (isPlaying === 'true') {
+                backgroundMusic.play();
+            }
+
+            playButton.click(function() {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    localStorage.setItem('musicPlaying', 'true');
+                } else {
+                    backgroundMusic.pause();
+                    localStorage.setItem('musicPlaying', 'false');
+                }
+            });
+
+            // 监听页面卸载事件（切换页面时触发）
+            $(window).on('beforeunload', function() {
+                localStorage.setItem('musicPlaying', backgroundMusic.paused? 'false' : 'true');
+            });
+        });
+    </script>
+</head>
+<body background="images/background.jpg">
+	<div id=bigbox>
+//轮播
+		<div class="bannar">
+			<img src="images/bannar1.jpg" width=100% height="600">
+			<img src="images/b2.jpg" width=100% height="600">
+			<img src="images/b3.jpg" width=100% height="600">
+	        <img src="images/b4.jpg" width=100% height="600">
+			<div class="right-btn">&gt;</div>
+			<div class="left-btn">&lt;</div>
+			<div class="yd">
+				<ul>
+					<li class="botton"></li>
+					<li class="botton"></li>
+					<li class="botton"></li>
+					<li class="botton"></li>
+					<li class="botton"></li>
+				</ul>
+			</div>
+		</div>
+		<nav>
+			<div class="logo" id="top"><a href="http://www.cnsa.gov.cn/n6758824/index.html"><img src="images/logo.png"width=100% height="60"></a></div>
+			<ul id="nav">
+				<li class="active"><a href="index.html">牙刷首页</a></li>
+				
+				<li class="active"><a href="web/htrw.html">产品介绍</a></li>
+				<li class="active"><a href="web/fxrw.html">数据分析</a></li>
+				<li class="active"><a href="web/htzs.html">一生护牙</a></li>
+				<li class="active"><a href="web/Logon.html">登陆注册</a></li>
+			</ul>
+		</nav>
+		<div class="content">
+            <!-- 你的页面内容 -->
+        </div>
+        <button id="playButton">播放音乐</button>
+    </div>
+		<div class="gg">
+			<!-- <marquee direction="right" scrollamount="8" scrolldelay="75" onMouseOut="start()" onMouseOver="stop()">
+				用今天的努力创造中国航天的未来</marquee> -->
+				<h1 class="titl">我们的宗旨</h1>
+				<ul class="list1">
+					<li>保护幼嫩牙齿,专为你的设计</li>
+					<li>它是赶走口腔病菌的使者，它是带来人们自信的天使，它是牙膏的亲密伙伴</li>
+					<li>不做刷牙原始人，告别手刷时代。</li>
+					<!-- <li>4.第四行</li> -->
+				</ul>
+		</div>
+
+		<div class="news">
+			<div class="title">世界口腔健康日</div>
+			<div class="bigcard">
+				<video src="./images/1.MP4" controls></video>
+			</div>
+		</div>
+
+		<div class="yhy">
+			<table>
+				<tr>
+					<td>
+						<h2 class="title">设计者展示</h2>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="container">
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/欣.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/王亚平/3743649">马欣怡</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/韧.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/刘旺/5600409">张韧</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/辰.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/刘伯明/21889">殷家辰</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/徐.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/费俊龙/326939">徐龙祥</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="container">
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/青.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/杨利伟/522856">曹叶青</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/乐.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/景海鹏/45704">周妙乐</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/刘.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/刘洋/5146151">刘诗韵</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="imgBX">
+									<img src="images/郑.jpg">
+								</div>
+								<div class="content">
+									<div>
+										<h3><a href="https://baike.baidu.com/item/翟志刚/9143038">郑哲</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="htzs">
+			<div class="title">护牙知识</div>
+			<div class="content1">
+				<img src="images/a1.jpg">
+				<div class="text">
+					<h2><a href="http://www.cnsa.gov.cn/n6758968/n6758975/c6811200/content.html">如何护牙健齿？</a></h2>
+					<p>1.每天早晚各刷一次牙，每次刷牙时间在2-3分钟，使用巴氏刷牙法 2.饭后要漱口，用牙线清洁牙缝 3.少进食含糖量高的食物和饮品，进食后需要漱口
+						</p>
+				</div>
+			</div>
+
+			<div class="content2">
+				<img src="images/a2.jpg">
+				<div class="text">
+					<h2><a href="http://www.cnsa.gov.cn/n6758968/n6758973/c6811436/content.html">如何预防牙齿智齿？</a></h2>
+					<p>
+						1. 定期检查口腔：定期去牙医那里检查口腔情况，特别是进行全口X光检查，以及察看智齿的生长情况。 2. 良好口腔卫生习惯：定期刷牙、使用牙线清洁牙缝，并使用漱口水杀菌，保持口腔清洁。
+					</p>
+				</div>
+			</div>
+			<div class="content3">
+				<img src="images/a3.jpg">
+				<div class="text">
+					<h2><a href="http://www.cnsa.gov.cn/n6758968/n6758973/c6810657/content.html">蛀牙怎么办？</a></h2>
+					<p>蛀牙的治疗方法包括根管治疗和填充1。预防蛀牙的方法包括保持口腔清洁，控制细菌生长，不吃甜食，定期检查牙齿12。已经龋齿的牙齿应该使用含氟牙膏刷牙，喝完可乐等饮料后不要马上刷牙，吃完任何东西后必须马上漱口。</p>
+	
+				</div>
+			</div>
+			<div class="content4">
+				<img src="images/a4.jpg">
+				<div class="text">
+					<h2><a href="http://www.cnsa.gov.cn/n6758968/n6758973/c6810658/content.html">如何防止蛀牙？</a></h2>
+					<p>选择含氟的牙膏和漱口水，能够增强牙齿的抗龋能力。 此外，根据口腔健康状况选择合适的牙刷（如软毛牙刷、电动牙刷等），以及定期更换牙刷和刷头，都是保持口腔健康的重要环节。</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="md">
+			<a href="#top">
+				<img src="images/火箭.png">
+			</a>
+		</div>
+		<footer>
+			<div>2024年世界口腔健康日</div>
+		</footer>
+	</div>
+	<!--彩蛋==>:https://robertsspaceindustries.com/starmap?camera=10,17.57,1,0,0 -->
+	<script>
+		//登陆
+		// 1.先去掉？  substr('起始的位置'，截取几个字符);
+		var params = location.search.substr(1); // uname=andy
+		if (params!=null) {
+			var obj=document.getElementById("nav").getElementsByTagName("li");
+			var arr = params.split('=');
+			var rs=arr[1].substr(7,4);
+			obj[5].innerHTML=rs[0]+rs[1]+rs[2]+rs[3] + '：欢迎您';
+			obj[5].style.cssText="padding-top:25px;color:white";
+		} 
+	</script>
+</body>
+
+</html>
